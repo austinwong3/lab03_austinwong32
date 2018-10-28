@@ -10,6 +10,7 @@ class StudentRoll {
   StudentRoll();
   void insertAtTail(const Student &s);
   std::string toString() const;
+  Student getHeadS();
 
   StudentRoll(const StudentRoll &orig);
   ~StudentRoll();
