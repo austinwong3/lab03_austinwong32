@@ -50,47 +50,6 @@ StudentRoll::StudentRoll(const StudentRoll &orig) {
     temp= temp->next;
     delete s;
   }
-
-  
-  
-  /*if (orig.head == NULL)
-    this->head = this->tail = NULL;
-  else{
-    Node* n = new Node;
-    Node *temp = orig.head;
-    std::cout<<"huh1"<<std::endl;
-    n->s = temp->s;
-    std::cout<<"huh2"<<std::endl;
-    n->next = new Node;
-    std::cout<<"huh3"<<std::endl;
-    this->head = n;
-    std::cout<<"huh4"<<std::endl;
-    n = n->next;
-    std::cout<<"huh5"<<std::endl;
-    temp = temp->next;
-    std::cout<<"huh6"<<std::endl;
-    if(temp == NULL)
-    {
-      std::cout<<"into if"<<std::endl;
-      n = NULL;
-      this->head = this->tail;
-    }
-    else{
-      std::cout<<"into else"<<std::endl;
-      while (temp->next!=NULL)
-      {
-        std::cout<<"into while"<<std::endl;
-        n->s = temp->s;
-        n->next= new Node;
-        n = n->next;
-        temp = temp->next;
-      }
-      n->s= temp->s;
-      n->next = NULL;
-      this->tail = n;
-      delete n;
-    }
-  }*/
 }
 
 StudentRoll::~StudentRoll() {
