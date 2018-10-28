@@ -1,7 +1,7 @@
 #include "student.h"
 #include <string>
 #include <cstring>
-#include <iostream>
+
 
 Student::Student(const char * const name, int perm) {
   this->name = NULL;

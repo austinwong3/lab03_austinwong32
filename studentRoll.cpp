@@ -1,6 +1,5 @@
 #include <string>
 #include "studentRoll.h"
-#include <iostream>
 
 StudentRoll::StudentRoll() {
   head = tail = NULL;
@@ -41,10 +40,6 @@ std::string StudentRoll::toString() const {
   return c;
 }
 
-Student StudentRoll::getHeadS()
-{
-  return *this->head->s;
-}
 StudentRoll::StudentRoll(const StudentRoll &orig) {
   head = tail = NULL;
   Node *temp = orig.head;
