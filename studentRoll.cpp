@@ -46,11 +46,14 @@ Student StudentRoll::getHeadS()
   return *this->head->s;
 }
 StudentRoll::StudentRoll(const StudentRoll &orig) {
+  head = tail = NULL;
   Node *temp = orig.head;
   while(temp != NULL)
   {
-    this->insertAtTail(*temp->s);
+    Student* s = new Student(*temp->s);
+    this->insertAtTail(*s);
     temp= temp->next;
+    delete s;
   }
 
   
@@ -120,8 +123,10 @@ StudentRoll & StudentRoll::operator =(const StudentRoll &right ) {
   Node *temp = right.head;
   while(temp != NULL)
   {
-    this->insertAtTail(*temp->s);
+    Student* s = new Student(*temp->s);
+    this->insertAtTail(*s);
     temp= temp->next;
+    delete s;
   }
 
   // KEEP THE CODE BELOW THIS LINE
